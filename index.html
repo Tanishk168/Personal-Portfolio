@@ -1,0 +1,418 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- media queries css link -->
+      <link rel="stylesheet" href="media.css">
+
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      background-color: rgb(16, 3, 53);
+      color: white;
+      font-family: "Poppins", serif;
+      width: 100%;
+      /* height: 100vh; */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* for header */
+    #nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      /* position: fixed; */
+      background-color: rgb(12, 2, 88);
+      padding: 1rem;
+      width: 100vw;
+      height: 8%;
+    }
+    .left {
+      font-size: larger;
+      font-size: x-large;
+    }
+    .right {
+      max-width: 70%;
+      margin-right:3rem ;
+      display: flex;
+      list-style-type: none;
+      gap: 20px;
+    }
+    .right a {
+      display: flex;
+      color: white;
+      text-decoration: none;
+    }
+    .right a:hover {
+      color: rgb(175, 9, 175);
+      text-decoration: underline;
+    }
+
+    /* for main */
+
+    .welcome-section {
+      display: flex;
+
+      justify-content: space-around;
+      align-items: center;
+      /* background-color: rgb(131, 110, 110); */
+    }
+    .welcome-left {
+      /* background-color: brown; */
+      width: 30%;
+      padding-top: 4rem;
+    }
+    #element {
+      color: rgb(175, 9, 175);
+    }
+    .welcome-section,
+    .experience h1 {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    .welcome-right {
+      /* background-color: rgb(243, 148, 148); */
+      /* object-fit: contain; */
+      width: 30%;
+      margin-top: 6rem;
+    }
+    .welcome-right img {
+      width: 100%;
+      max-width: 100%;
+    }
+    .line-container {
+      display: flex;
+      justify-content: center;
+      width: 100vw;
+    }
+    .line-container hr {
+      width: 90vw;
+      margin-bottom: 2rem;
+      border: 0;
+      border-top: 2px solid rgb(156, 62, 233); /* Change the color of the border */
+    }
+
+    .text-gray {
+      color: rgb(124, 116, 116);
+      /* margin-right: 8%; */
+    }
+    /* for skills */
+    .second-section {
+      /* background-color: rgb(131, 110, 110); */
+      display: flex;
+      flex-direction: column;
+      padding-left: 7%;
+      padding-right: 7%;
+      /* align-items: center; */
+    }
+    .artificial-hr {
+      background-color: rgb(230, 215, 215);
+      height: 0.1rem;
+    }
+    .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Ensures the cards are centered */
+  gap: 20px; /* Adds spacing between cards */
+  padding: 2rem 0;
+}
+
+.project-card {
+  flex: 1 1 calc(30% - 40px); /* Adjust to fit three cards per row */
+  max-width: 30%; /* Ensure cards don't exceed this width */
+  background-color: rgb(26, 10, 92);
+  border: 2px solid rgb(175, 9, 175);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center the text and content inside the cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(175, 9, 175, 0.4);
+}
+
+.project-card img.project-image {
+  width: 100%; /* Image fills the card width */
+  max-height: 150px; /* Limit height */
+  object-fit: contain; /* Prevents image distortion */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.project-card p {
+  color: rgb(180, 180, 180);
+  margin: 0.5rem 0 1rem;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.tech-icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.project-card .btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: rgb(175, 9, 175);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-card .btn:hover {
+  background-color: rgb(210, 15, 210);
+}
+
+/* Responsive Behavior */
+@media screen and (max-width: 768px) {
+  .project-card {
+    flex: 1 1 100%; /* Cards stack vertically on small screens */
+    max-width: 100%;
+  }
+
+  .projects-container {
+    gap: 15px; /* Reduce gap on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-card {
+    padding: 1rem; /* Reduce padding for mobile devices */
+  }
+}
+
+/* Skills Section  */
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 7%;
+}
+
+.skills-heading {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem 0;
+}
+
+.skill-card {
+  width: 120px;
+  height: 140px;
+  background-color: rgb(26, 10, 92);
+  border: 2px solid rgb(175, 9, 175);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(175, 9, 175, 0.4);
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card h3 {
+  font-size: 1rem;
+  color: white;
+}
+
+
+
+  </style>
+
+  <body>
+    <header>
+      <nav id="nav-bar">
+        <div class="left">Tanishk's Portfolio</div>
+        <div class="right">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Sevices</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">Contact Me</a></li>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="welcome-section">
+        <section class="welcome-left">
+          <h1>
+            Welcome ,my name is
+            <span style="color: rgb(175, 9, 175)">Tanishk Sharma</span> and
+          </h1>
+          <h1>i am a <span id="element">web developer</span></h1>
+        </section>
+        <section class="welcome-right">
+          <img src="/assets/bg.png" alt="" />
+        </section>
+      </section>
+      <div class="line-container">
+        <hr />
+      </div>
+      <section class="second-section">
+        <span class="text-gray">What have I done so far</span>
+        <h1 class="projects-heading">Projects</h1>
+        <div class="artificial-hr"></div>
+      
+        <div class="projects-container">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <img src="./assets/portfolio.png" alt="Portfolio Screenshot" class="project-image" />
+            <h2>Portfolio Website</h2>
+            <p>A personal portfolio application showcasing my skills ,projects and experience.</p>
+            <div class="tech-icons">
+              <img src="./assets/html.png" alt="HTML" />
+              <img src="./assets/css.png" alt="CSS" />
+              <img src="./assets/js-file.png" alt="JavaScript" />
+            </div>
+            <a href="#" class="btn">View Project</a>
+          </div>
+      
+          <!-- Project 2 -->
+          <div class="project-card">
+            <img src="./assets/ecommerce.png" alt="E-Commerce Screenshot" class="project-image" />
+            <h2>E-Commerce App</h2>
+            <p>A functionality based ecommerce application for products, built using html,css,javascript,react and tailwind css</p>
+            <div class="tech-icons">
+              <img style="filter: invert(1);" src="./assets/react.png" alt="React" />
+              <img src="./assets/js-file.png" alt="js" />
+              <img src="./assets/tailwind-css.svg" alt="tailwind" />
+              <img src="./assets/html.png" alt="html" />
+            </div>
+            <a href="#" class="btn">View Project</a>
+          </div>
+      
+          <!-- Project 3
+           <div class="project-card">
+            <img src="./assets/blog.png" alt="Blog Platform Screenshot" class="project-image" />
+            <h2>Blog Platform</h2>
+            <p>A blog application where users can write and share posts.</p>
+            <div class="tech-icons">
+              <img src="./assets/angular.png" alt="Angular" />
+              <img src="./assets/firebase.png" alt="Firebase" />
+              <img src="./assets/typescript.png" alt="TypeScript" />
+            </div>
+            <a href="#" class="btn">View Project</a>
+          </div> -->
+        </div>
+      </section>
+
+      <div class="line-container">
+        <hr />
+      </div>
+
+      <section class="skills-section">
+        <span class="text-gray">What I am good at</span>
+        <h1 class="skills-heading">Skills</h1>
+        <div class="artificial-hr"></div>
+
+        <div class="skills-container">
+          <!-- Skill 1 -->
+          <div class="skill-card">
+            <img src="./assets/html.png" alt="HTML" />
+            <h3>HTML</h3>
+          </div>
+
+          <!-- Skill 2 -->
+          <div class="skill-card">
+            <img src="./assets/css.png" alt="CSS" />
+            <h3>CSS</h3>
+          </div>
+
+          <!-- Skill 3 -->
+          <div class="skill-card">
+            <img src="./assets/js-file.png" alt="JavaScript" />
+            <h3>JavaScript</h3>
+          </div>
+
+          <!-- Skill 4 -->
+          <div class="skill-card">
+            <img style="filter: invert(1);" src="./assets/react.png" alt="React" />
+            <h3>React</h3>
+          </div>
+
+          <!-- Skill 5 -->
+          <div class="skill-card">
+            <img src="./assets/tailwind-css.svg" alt="Tailwind CSS" />
+            <h3>Tailwind CSS</h3>
+          </div>
+
+          <!-- Skill 6 -->
+          <div class="skill-card">
+            <img src="./assets/sql.png" alt="SQL" />
+            <h3>SQL</h3>
+          </div>
+
+          
+        </div>
+      </section>
+
+
+    </main>
+
+    <project-tile></project-tile>
+
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Valorant God", "Web Developer"],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>

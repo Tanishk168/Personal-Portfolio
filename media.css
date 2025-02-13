@@ -1,0 +1,124 @@
+/* For Tablets (768px and smaller) */
+@media (max-width: 768px) {
+    #nav-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+    
+    .right {
+      /* flex-direction: column; */
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    .welcome-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+  
+    .welcome-left,
+    .welcome-right {
+      width: 100%;
+    }
+  
+    .welcome-left h1 {
+      font-size: 1.5rem;
+    }
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .project-card {
+        width: 90%;
+      }
+  }
+  
+  /* For Mobile Devices (480px and smaller) */
+  @media (max-width: 480px) {
+    body {
+      padding: 0 1rem;
+    }
+  
+    #nav-bar {
+      padding: 1rem 0.5rem;
+    }
+  
+    .right li a {
+      font-size: 0.9rem;
+    }
+  
+    .welcome-left h1 {
+      font-size: 1.2rem;
+    }
+  
+    .welcome-right img {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .line-container hr {
+      width: 100%;
+    }
+  }
+  
+  /* For Small Mobile Devices (320px and smaller) */
+  @media (max-width: 320px) {
+    .welcome-left h1 {
+      font-size: 1rem;
+    }
+  
+    .right li a {
+      font-size: 0.8rem;
+    }
+  
+    .welcome-right img {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .projects-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .project-card {
+      width: 90%;
+    }
+  }
+  
+  /* skills */
+  /* Responsive Design */
+@media screen and (max-width: 768px) {
+  .skills-container {
+    gap: 15px;
+  }
+  .skill-card {
+    width: 100px;
+    height: 120px;
+  }
+  .skill-card img {
+    width: 40px;
+    height: 40px;
+  }
+  .skill-card h3 {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skill-card {
+    width: 90px;
+    height: 110px;
+  }
+  .skill-card img {
+    width: 35px;
+    height: 35px;
+  }
+  .skill-card h3 {
+    font-size: 0.8rem;
+  }
+}
